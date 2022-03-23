@@ -1,0 +1,46 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "start",
+      "identifier": "canary.start-identifier",
+      "script": "__handler.js",
+      "shortcut": "ctrl alt c",
+      "handlers": {
+        "run": "onRun",
+        "actions": {
+          "Shutdown": "onShutdown"
+        }
+      }
+    },
+    {
+      "name": "Import Draw.io",
+      "identifier": "canary.import.svg",
+      "script": "__handler.js",
+      "handler": "importSvg"
+    },
+    {
+      "name": "Edit Draw.io",
+      "identifier": "canary.edit.svg",
+      "script": "__handler.js",
+      "handler": "editSvg",
+      "shortcut": "ctrl alt e"
+    }
+  ],
+  "menu": {
+    "title": "Canary",
+    "items": [
+      "canary.start-identifier",
+      "canary.import.svg",
+      "canary.edit.svg"
+    ]
+  },
+  "version": "1.1.0",
+  "name": "canary",
+  "identifier": "canary",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "wangyafei07",
+  "authorEmail": "wangyafei07@meituan.com"
+}
